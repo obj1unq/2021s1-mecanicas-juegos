@@ -1,0 +1,15 @@
+import selector.*
+import wollok.game.*
+
+program juego {
+	game.addVisual(eva)
+	game.addVisual(neo)
+	game.addVisual(dimitry)
+	game.addVisual(selector)
+	
+	keyboard.left().onPressDo({ selector.moveteIzquierda() })
+	keyboard.right().onPressDo({ selector.moveteDerecha() })
+	keyboard.space().onPressDo({ selector.seleccionar() })
+	
+	game.start()
+}
